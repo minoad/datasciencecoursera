@@ -1,0 +1,22 @@
+Weekly Notes
+========================================================
+
+-All of the apply's: loop over x and evaluate a funtion on each element
+lapply  - loop over a list or vector.  Object will be coerced to a list if possible.  always returns a list.
+sapply  - simplify result.  if possible, will simply into a vector, otherwise it will return a list.
+apply   - apply over margins of array.  this takes an addition required field.  int, which is your row/column/dim
+tapply  - apply over subsets of a vector
+mapply  - multivarate versioni of lapply
+
+split   - very helpfull
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+
