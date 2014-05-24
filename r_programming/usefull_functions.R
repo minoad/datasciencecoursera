@@ -11,3 +11,5 @@ cbind(object, object2) # combine objects as columns
 rbind(object, object2) # combine objects as rows 
 
 fix(object)               # edit in place
+
+with(list(x<-5),foo(x))  #this seems sort of like a python list treatment
