@@ -5,11 +5,12 @@ Weekly Notes
 lapply  - loop over a list or vector.  Object will be coerced to a list if possible.  always returns a list.
 sapply  - simplify result.  if possible, will simply into a vector, otherwise it will return a list.
 apply   - apply over margins of array.  this takes an addition required field.  int, which is your row/column/dim
-tapply  - apply over subsets of a vector
+tapply  - apply over subsets of a vector.  (vector[observation], vector[factor]same_length).  Applies data and factor to a function.
 mapply  - multivarate versioni of lapply
 
-split   - very helpfull
-
+quantile(1:5,probs=c(.25,.50,.75))
+split = Takes a vector and then factors and splits the vector by the factor.  always returns a list.  can also split dataframes.
+gl = This generats factors by specifying the patteron of thier levels.
 ```{r}
 summary(cars)
 ```
