@@ -1,0 +1,2 @@
+less -r Hospital_Revised_Flatfiles.pdf | grep -m2 -E -i '^19\. Outcome of Care Measures.csv$' -A 132
+less -r Hospital_Revised_Flatfiles.pdf | grep -E -i '^11\. Hos' -A 35 
