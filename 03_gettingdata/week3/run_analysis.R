@@ -47,7 +47,7 @@ get.data<-function(){
     
     activities<<-read.table('~/repo/datasciencecoursera/3_gettingdata/week3/class_project/UCI HAR Dataset/activity_labels.txt', stringsAsFactors = FALSE)
     
-
+    
     
     
 
@@ -78,9 +78,15 @@ get.data<-function(){
     xtestdata$labint<-y_test_data
     xtraindata$labint<-y_train_data
     
-   
-   
-    #lact<-sapply(seq(NROW(xtestdata$labels)), function(i) activities$V2[activities$V1==xtestdata[i,]$labels[[1]]])
+   fulldata<-rbind(xtestdata,xtraindata)
+   means<-c()
+   for(i in seq(length(fulldata))){
+       print(i)
+       n<-fulldata[,i]
+       means<-c(means,(mean(as.numeric(trim(gsub(fulldata[,i], pattern = ',', replace=''))))))
+   }
+   write.table(means,file='means.txt') 
+   #lact<-sapply(seq(NROW(xtestdata$labels)), function(i) activities$V2[activities$V1==xtestdata[i,]$labels[[1]]])
     
     #merge(x=xtestdata, y=lact)
     
